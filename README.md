@@ -22,7 +22,7 @@ Independent variables: Which algorithm, which parameters for each algorithm, whi
 Dependent variables: Accuracy, time, number of instructions (number of function evaluations, number of "iterations" of the algorithm, etc. depends on which algorithm)
 The goal is to find which algorithms are better in which situations.
 
-![](performance_graph_example1.png)
+![](doc/performance_graph_example1.png)
 
 There may be optimizations from programming (ie not math) to improve speed and numerical stability.
 
