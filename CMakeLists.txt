@@ -57,7 +57,6 @@ if(MSVC)
     )
 endif()
 
-add_executable(${PROJECT_NAME} src/main.cpp)
 add_subdirectory(src)
 
 
