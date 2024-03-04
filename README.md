@@ -1,12 +1,8 @@
 # Installation
 
-```bash
-git clone https://github.com/charles-victorio/Numerical-Integration.git
-cd Numerical-Integration
-chmod +x tools/*.sh
-```
+## Prerequisites
 
-## Linux
+### Linux
 
 ```bash
 sudo apt-get update
@@ -14,14 +10,14 @@ sudo apt-get install cmake
 sudo apt-get install g++
 ```
 
-## Mac
+### Mac
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install cmake
 xcode-select --install
 ```
 
-## Windows
+### Windows
 To install CMake on Windows, download the installer from the CMake Downloads page and follow the installation instructions.
 g++ (MinGW)
 
@@ -30,6 +26,27 @@ g++ can be installed on Windows using MinGW.
 - Download MinGW from https://sourceforge.net/projects/mingw/.
 - Install MinGW, and during the installation, make sure to select the mingw32-gcc-g++ package.
 - Add the MinGW bin directory (usually C:\MinGW\bin) to your system's PATH environment variable.
+
+
+## Build and Run
+```bash
+git clone https://github.com/charles-victorio/Numerical-Integration.git
+cd Numerical-Integration
+```
+If you are comfortable with bash call ```chmod +x tools/*.sh ``` once.
+
+For each run call:
+
+```bash
+tools/build_and_run.sh
+```
+
+Or you may prefer:
+```bash
+cd build
+make
+./numerical_integration
+```
 
 # What to do now
 
