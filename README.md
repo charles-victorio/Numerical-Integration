@@ -1,19 +1,35 @@
-# How to Use
+# Installation
 
-In one line:
-
-```python
-print(Integral(lambda x: 2 * x, 0, 10).integrate_with(Trapezoid(1000)))
+```bash
+git clone https://github.com/charles-victorio/Numerical-Integration.git
+cd Numerical-Integration
+chmod +x tools/*.sh
 ```
 
-A lambda function in python just helps us write a function in one line.
+## Linux
 
-To analyze the accuracy and cost of multiple algorithms on the same function, create an Integrator() object, set the strategy and it's parameters, and keep track of the computed results. See performance_graphs.py.
+```bash
+sudo apt-get update
+sudo apt-get install cmake
+sudo apt-get install g++
+```
 
-The Integral class stores the basic data for the integral,
-classes which inherit from Strategy are different algorithms for numeric integration,
-the report class stores the data that we want to keep track of for the performance of the integration,
-and the Integrator() class is where the integration is executed.
+## Mac
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install cmake
+xcode-select --install
+```
+
+## Windows
+To install CMake on Windows, download the installer from the CMake Downloads page and follow the installation instructions.
+g++ (MinGW)
+
+g++ can be installed on Windows using MinGW.
+
+- Download MinGW from https://sourceforge.net/projects/mingw/.
+- Install MinGW, and during the installation, make sure to select the mingw32-gcc-g++ package.
+- Add the MinGW bin directory (usually C:\MinGW\bin) to your system's PATH environment variable.
 
 # What to do now
 
