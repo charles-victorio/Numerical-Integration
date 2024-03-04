@@ -1,5 +1,6 @@
 #include <iostream>
-#include "methods/right_hand_rule/right_hand_rule.hpp"
+#include "methods/right_hand_approximation/right_hand_approximation.hpp"
+
 #include <cmath>
 
 double f (double x){

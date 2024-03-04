@@ -7,7 +7,7 @@
 
 namespace integration::methods{
      template<typename Function, typename Rational, typename Integer>
-     Rational mid_hand_approximation(Function f, Rational a, Rational b, Integer n){
+     Rational mid_point_approximation(Function f, Rational a, Rational b, Integer n){
         static_assert(std::is_invocable_v<Function, Rational> and std::is_integral_v<Integer>);
         assert(n > 0); // n must be positive
 
