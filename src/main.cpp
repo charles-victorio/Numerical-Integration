@@ -1,19 +1,24 @@
 #include <iostream>
-#include "methods/right_hand_approximation/right_hand_approximation.hpp"
-
 #include <cmath>
+#include <random>
+#include <unordered_map>
+#include <cassert>
+#include "approximation_methods/approximations.hpp"
+ 
 
-double f (double x){
-     return pow(x, x);
-}
-int main(){
-     
-    
-     double a = 1.5, b = 3.7;
-     uint16_t n = 10000;
+int main(){    
 
-     std::cout << "The integral of x^x from " << a << " to " << b << " is " << integration::methods::right_hand_rule(f, a, b, n) << std::endl;
+     auto f = [](double x){
+          return pow(x, x);
+     };
 
+     using namespace integration::methods;
+     Approximation approximation(f, 1.2, 5.3, 100000); // notice that both a and b should be of the same type
+ 
+     std::cout << approximation.approximate_with(RightHandRuleApproximation{}) << std::endl;
+     std::cout << approximation.approximate_with<MidPointRuleApproximation>() << std::endl;
+     std::cout << approximation.approximate_with(SimpsonsApproximation{}) << std::endl;
+ 
      return 0;
      
 }
