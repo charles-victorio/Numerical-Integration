@@ -11,12 +11,8 @@ namespace integration::methods{
 
              Rational delta_x = (b - a) / n;
              Rational sum = 0;
-
-             static auto x = [](Integer i){
-               return a + i * delta_x;
-             }
-
-             for (Integer i = 1; i < n; i +=1) sum += f(x(i));
+             
+             for (Integer i = 1; i < n; i +=1) sum += f(a + i * delta_x);
 
              return delta_x * (0.5 * (f(a) + f(b)) + sum); 
           }

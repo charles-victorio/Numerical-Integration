@@ -13,9 +13,9 @@ namespace integration::methods{
              Rational first_sum = 0;
              Rational second_sum = 0;
 
-             static auto x = [](Integer i){
+             static auto x = [a, delta_x](Integer i){
                return a + i * delta_x;
-             }
+             };
 
              for (Integer i = 1; i < n; i += 2) first_sum += f(x(i));
              for (Integer i = 2; i < n; i += 2) second_sum += f(x(i));

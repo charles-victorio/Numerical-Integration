@@ -1,10 +1,7 @@
 #pragma once
 #include <cassert>
 #include <type_traits>
-#include <functional>
 
-// example code: 
-// note that the signatures will be changed at later stages, this is just an implementation example
 
 namespace integration::methods{
     struct RightHandRuleApproximation
