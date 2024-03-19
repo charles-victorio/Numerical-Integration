@@ -6,12 +6,12 @@ namespace integration::methods{
      struct SimpsonsApproximation{
           template<typename Function, typename Real, typename Integer>
           Real approximate(Function f, Real a, Real b, Integer n){
-             static_assert(std::is_invocable_v<Function, Rational> and std::is_integral_v<Integer>);
+             static_assert(std::is_invocable_v<Function, Real> and std::is_integral_v<Integer>);
              assert(n > 0 and n % 2 not_eq 1); // n must be positive
 
-             Rational delta_x = (b - a) / n;
-             Rational first_sum = 0;
-             Rational second_sum = 0;
+             Real delta_x = (b - a) / n;
+             Real first_sum = 0;
+             Real second_sum = 0;
 
              static auto x = [a, delta_x](Integer i){
                return a + i * delta_x;
