@@ -1,8 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include <random>
-#include <unordered_map>
-#include <cassert>
 #include "approximation_methods/approximations.hpp"
  
 
