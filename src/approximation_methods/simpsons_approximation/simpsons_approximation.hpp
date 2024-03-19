@@ -4,8 +4,8 @@
 
 namespace integration::methods{
      struct SimpsonsApproximation{
-          template<typename Function, typename Rational, typename Integer>
-          Rational approximate(Function f, Rational a, Rational b, Integer n){
+          template<typename Function, typename Real, typename Integer>
+          Real approximate(Function f, Real a, Real b, Integer n){
              static_assert(std::is_invocable_v<Function, Rational> and std::is_integral_v<Integer>);
              assert(n > 0 and n % 2 not_eq 1); // n must be positive
 
