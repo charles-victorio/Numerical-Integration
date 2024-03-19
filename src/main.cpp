@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include "approximation/approximation.hpp"
 #include "approximation_methods/approximations.hpp"
  
 
